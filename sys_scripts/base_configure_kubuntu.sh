@@ -6,9 +6,6 @@ sudo apt install nmap mc net-tools vim ssh build-essential
 git config --global user.name "Leekai"
 git config --global user.email leekai.dev@gmail.com
 
-# Обновление пакетов
-sudo apt update && sudo apt upgrade -y
-
 # Установка зависимостей
 sudo apt install -y wget gpg
 
