@@ -8,7 +8,7 @@ git config --global user.email leekai.dev@gmail.com
 sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
 sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
-sudo dnf install -y --skip-unavailable nmap mc net-tools vim terminator
+sudo dnf install -y --skip-unavailable nmap htop mc net-tools vim terminator
 
 # Импортируйте ключ Microsoft GPG
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
