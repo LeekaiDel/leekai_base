@@ -1,4 +1,20 @@
 #!/usr/bin/sh
+
+# Установите инструменты разработки
+#sudo dnf groupinstall "Development Tools"
+sudo dnf install cmake gcc-c++ git wget
+
+# Установите зависимости ROS 2
+sudo dnf install -y python3-pip python3-rosdep
+sudo dnf install -y assimp-devel bullet-devel libogg-devel libtheora-devel tinyxml2-devel openssl-devel
+
+# Включите поддержку 32-битных библиотек (если нужно)
+sudo dnf install -y glibc-devel.i686
+
+# Установите дополнительные зависимости через pip
+python3 -m pip install -U pip
+python3 -m pip install colcon-common-extensions vcstool
+
 # Создайте рабочую директорию
 mkdir -p ~/ros2_jazzy/src
 cd ~/ros2_jazzy
