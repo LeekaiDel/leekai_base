@@ -2,7 +2,7 @@
 
 # Установите инструменты разработки
 #sudo dnf groupinstall "Development Tools"
-sudo dnf install cmake gcc-c++ git wget
+sudo dnf install -y cmake gcc-c++ git wget
 
 # Установите зависимости ROS 2
 sudo dnf install -y python3-pip python3-rosdep
