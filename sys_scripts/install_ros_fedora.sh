@@ -34,11 +34,6 @@ export RPM_PACKAGE_VERSION=2.0
 export RPM_PACKAGE_RELEASE=1.fc$(rpm -E %fedora)
 export RPM_PACKAGE_VENDOR="ROS 2 Team"
 
-# Или минимальный набор
-#export RPM_PACKAGE_RELEASE=1
-#export RPM_ARCH=x86_64
-
-
 # Соберите ROS 2
 colcon build --symlink-install
 
