@@ -1,6 +1,12 @@
 #!/bin/bash
 # Проверяем был ли запущен этот скрипт от имени администратора
 [ $EUID -ne 0 ] && echo "Запустите: sudo $0" && exit 1
+
+# Делаем ускорение DNF
+grep -q "max_parallel_downloads" /etc/dnf/dnf.conf || echo "max_parallel_downloads=10" >> /etc/dnf/dnf.conf
+grep -q "fastestmirror" /etc/dnf/dnf.conf || echo "fastestmirror=true" >> /etc/dnf/dnf.conf
+echo "DNF переконфигурирован для ускорения."
+
 # Сразу конфигурим git
 git config --global user.name "Leekai"
 git config --global user.email leekai.dev@gmail.com

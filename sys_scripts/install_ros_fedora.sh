@@ -1,7 +1,6 @@
 #!/usr/bin/sh
 
 # Установите инструменты разработки
-#sudo dnf groupinstall "Development Tools"
 sudo dnf install -y cmake gcc-c++ git wget
 
 # Установите зависимости ROS 2
@@ -44,5 +43,4 @@ export RPM_PACKAGE_VENDOR="ROS 2 Team"
 colcon build --symlink-install
 
 # Добавьте в .bashrc
-echo "source ~/ros2_jazzy/install/local_setup.bash" >> ~/.bashrc
-source ~/.bashrc
+grep -r "~/ros2_jazzy/install/local_setup.bash" ~/.bashrc || echo "source ~/ros2_jazzy/install/local_setup.bash" >> ~/.bashrc && source ~/.bashrc
