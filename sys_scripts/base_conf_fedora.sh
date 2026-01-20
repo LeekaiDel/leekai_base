@@ -19,6 +19,8 @@ dnf install -y https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-
 
 dnf install -y --skip-unavailable nmap htop mc net-tools vim terminator
 
+sudo usermod -a -G dialout $USER
+
 # Установка github
 sudo dnf install dnf5-plugins
 sudo dnf config-manager addrepo --from-repofile=https://cli.github.com/packages/rpm/gh-cli.repo
